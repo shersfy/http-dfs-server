@@ -1,0 +1,23 @@
+# ------start-------
+spring:
+  application:
+    name: edpglobal-fs-server
+  main:
+    banner-mode: 'off'
+#  cloud:
+#    config:
+#      name: ${spring.application.name}
+#      profile: dev
+#      label: master
+#      uri:
+#      - http://10.12.51.183:8800
+#      - http://10.12.51.182:8800
+# logging
+logging:
+  path: /edpglobal/logs/${spring.application.name}
+  level:
+    root: info
+  edpglobal:
+    filter:
+      level: error
+# ------end-------
